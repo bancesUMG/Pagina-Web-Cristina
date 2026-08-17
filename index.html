@@ -3,71 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestro Álbum de Fotos</title>
-    <!-- Vinculamos el archivo CSS que crearemos después -->
+    <title>Nuestra Historia de Amor | Cristina & Tú</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fuente opcional de Google Fonts para un toque más bonito -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- 1. PANTALLA DE CARGA -->
+    <div id="loader">
+        <div class="heart-loader"></div>
+        <p>Cargando nuestros recuerdos...</p>
+    </div>
+
+    <!-- 2. FONDO DE CORAZONES FLOTANTES -->
+    <div class="bg-hearts" id="hearts-container"></div>
+
+    <!-- 3. REPRODUCTOR DE MÚSICA FLOTANTE -->
+    <div class="music-player">
+        <button id="music-toggle" title="Reproducir / Pausar Música">
+            <i class="fa-solid fa-music"></i>
+        </button>
+        <!-- Puedes cambiar la canción cambiando la URL del audio -->
+        <audio id="bg-music" loop src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112189.mp3"></audio>
+    </div>
+
+    <!-- ENCABEZADO -->
     <header>
         <div class="container">
-            <h1>Nuestro Álbum Especial</h1>
-            <p>Momentos inolvidables juntos ❤️</p>
+            <span class="badge">Nuestra Galería</span>
+            <h1 class="titulo-romantico">Cristina & Tú</h1>
+            <p class="subtitulo">"Cada foto cuenta un pedacito de nuestra historia"</p>
+            <div class="linea-decorativa">
+                <i class="fa-solid fa-heart"></i>
+            </div>
         </div>
     </header>
 
+    <!-- GALERÍA DE FOTOS -->
     <main class="container">
-        <!-- Esta es la cuadrícula donde irán las fotos -->
         <div class="galeria">
 
-            <!-- FOTO 1 (Repite este bloque para cada foto) -->
-            <div class="foto-item">
-                <img src="fotos/foto1.jpg" alt="Descripción de la foto 1">
-                <div class="pie-foto">Nuestro primer viaje</div>
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1IilbOFI0DZo3qBxsKYZbP7yUYcA3jQhc" alt="Foto 1">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Un día inolvidable ✨</p></div>
             </div>
 
-            <!-- FOTO 2 -->
-            <div class="foto-item">
-                <img src="fotos/foto2.jpg" alt="Descripción de la foto 2">
-                <div class="pie-foto">Cena de aniversario</div>
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/11zZD2Ntw3n-fpxLxZeDTL_pnrkPKM8Ht" alt="Foto 2">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Momento especial juntos 💖</p></div>
             </div>
 
-            <!-- FOTO 3 -->
-            <div class="foto-item">
-                <img src="fotos/foto3.jpg" alt="Descripción de la foto 3">
-                <div class="pie-foto">Caminata en la montaña</div>
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1Q87T_NJU0PD4aa8UUMvIs6ZrEhPl0mo-" alt="Foto 3">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Nuestra aventura favorita 📸</p></div>
             </div>
 
-            <!-- FOTO 4 -->
-            <div class="foto-item">
-                <img src="fotos/foto4.jpg" alt="Descripción de la foto 4">
-                <div class="pie-foto">Día de playa</div>
-            </div>
-            
-            <!-- FOTO 5 -->
-            <div class="foto-item">
-                <img src="fotos/foto5.jpg" alt="Descripción de la foto 5">
-                <div class="pie-foto">Concierto increíble</div>
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1HYl0TxyeaTIEcdgexc1HhrRdrhSG9nMR" alt="Foto 4">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Risas y recuerdos 😊</p></div>
             </div>
 
-            <!-- FOTO 6 -->
-            <div class="foto-item">
-                <img src="fotos/foto6.jpg" alt="Descripción de la foto 6">
-                <div class="pie-foto">Simplemente nosotros</div>
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1Wt2dmgaR5X-W6TO32iAiYss4TFemdy6F" alt="Foto 5">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Siempre juntos 🌹</p></div>
             </div>
-            
-            <!-- Puedes seguir añadiendo bloques <div class="foto-item">...</div> para más fotos -->
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1QCpJ3AM3fst8poXDJgCZJGkoMgpYQZSl" alt="Foto 6">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Un instante perfecto 💫</p></div>
+            </div>
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1DnvJbh3Mvl9v1WjJJ0U51KKHxBVLQqD8" alt="Foto 7">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Coleccionando momentos 🎨</p></div>
+            </div>
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1htCr8UkaQMwNEgPpmzyLMonlx5TDT-QO" alt="Foto 8">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Tu sonrisa favorita 💕</p></div>
+            </div>
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1lFi8bt_sHDeMFH2uVmWNOYrjvmz83l8y" alt="Foto 9">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Días de sol y felicidad ☀️</p></div>
+            </div>
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1ogPlalYDQKqlVtnlZYJ1NHm0imQf8Vo5" alt="Foto 10">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Creando recuerdos 📖</p></div>
+            </div>
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1eYTC3OUM14Y9Xzkn-3Pp3EXDSLG7OccR" alt="Foto 11">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Mi persona favorita 🥰</p></div>
+            </div>
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1M1j4G-lsZGCdXEep_-8Y0w5TlLJxNFFU" alt="Foto 12">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Un paseo especial 🚶‍♂️🚶‍♀️</p></div>
+            </div>
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1hz53ynDt2GzTioMB_GLEgAu0XDKl1jgd" alt="Foto 13">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Detalles que enamoran 💌</p></div>
+            </div>
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1GUqNbnNKGWg3BTvPkyw2d228DFWU1E4R" alt="Foto 14">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Juntos en cada paso 👣</p></div>
+            </div>
+
+            <div class="tarjeta reveal">
+                <div class="tarjeta-imagen">
+                    <img src="https://lh3.googleusercontent.com/d/1ON5fI55BAXpvOokwgr5ZVkKoML5txpkC" alt="Foto 15">
+                    <div class="overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="pie-foto"><p>Por muchos años más 🥂</p></div>
+            </div>
 
         </div>
     </main>
 
+    <!-- MODAL PANTALLA COMPLETA -->
+    <div id="modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img-modal">
+        <div id="caption"></div>
+    </div>
+
     <footer>
-        <div class="container">
-            <p>Hecho con ❤️ para mi novia</p>
-        </div>
+        <p>Hecho con todo el amor del mundo ❤️</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
