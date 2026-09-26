@@ -3,13 +3,22 @@ const API_KEY = 'AIzaSyAsXNpv4zvr0Hd-gsT7lCJ_0vGG_htr28Q';
 const FOLDER_ID = '1f6Cm5deWFhtenPF-JGeqH1EQZ6FL6Bwm';
 
 const captions = [
-    "Un día inolvidable ✨", "Momento especial juntos 💖", "Te amo Bambia 📸",
-    "Risas y recuerdos 😊", "Siempre juntos 🌹", "Un instante perfecto 💫",
-    "Coleccionando momentos 🎨", "Tu sonrisa favorita 💕", "Días de sol y felicidad ☀️",
-    "Creando recuerdos 📖", "Mi persona favorita 🥰", "Un paseo especial 🚶‍♂️🚶‍♀️",
-    "Detalles que enamoran 💌", "Juntos en cada paso 👣", "Por muchos años más 🥂"
+    "La chica mas Rara del mundo 🤪✨", 
+    "La chica que no se baña 🧼🙈", 
+    "Te amo Bambia 📸💖",
+    "La chica que ronca mucho 😴💤", 
+    "La mujer mas linda del mundo 👑🌹", 
+    "Te amo Rarita 🪐🤪",
+    "La mujer mas interasante del mundo 🔍✨", 
+    "La mujer mas Bonita 💕✨", 
+    "Una persona Especial ☀️🪽",
+    "La mujer mas feliz 😸🌈", 
+    "La mejor mujer del mundo 🥇❤️", 
+    "La mejor novia 👩‍❤️‍👨✨",
+    "A la chica que odia el agua 🐈💦", 
+    "Te amo Cristina 👩‍❤️‍💋‍👨💋", 
+    "Por muchos años más 🥂🍾"
 ];
-
 let todosLosArchivos = [];
 
 // 2. OBTENER ARCHIVOS DE LA CARPETA DE DRIVE
