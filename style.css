@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     background-color: #0f0c20;
     z-index: 9999;
     display: flex;
@@ -166,7 +168,7 @@ header {
     font-size: 0.9rem;
 }
 
-/* --- GALERÍA --- */
+/* --- GALERÍA PC --- */
 .container {
     max-width: 1250px;
     margin: 0 auto;
@@ -181,7 +183,7 @@ header {
     gap: 35px;
 }
 
-/* --- TARJETAS --- */
+/* --- TARJETAS PC --- */
 .tarjeta {
     background: rgba(255, 255, 255, 0.03);
     border-radius: 24px;
@@ -213,10 +215,11 @@ header {
     overflow: hidden;
 }
 
-.tarjeta img {
+.tarjeta img, .tarjeta iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: none;
     transition: transform 0.8s ease;
 }
 
@@ -234,6 +237,7 @@ header {
     align-items: center;
     opacity: 0;
     transition: opacity 0.4s ease;
+    pointer-events: none;
 }
 
 .overlay i {
@@ -257,13 +261,14 @@ header {
     color: #ff85a2;
 }
 
-/* --- MODAL --- */
+/* --- MODAL PC --- */
 .modal {
     display: none;
     position: fixed;
     z-index: 1000;
     top: 0; left: 0;
     width: 100%; height: 100%;
+    height: 100dvh;
     background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(15px);
     justify-content: center;
@@ -271,12 +276,27 @@ header {
     flex-direction: column;
 }
 
-.modal-content {
-    max-width: 85%;
-    max-height: 80vh;
+#modal-media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 75vh;
+}
+
+.modal-media-item {
+    max-width: 90vw;
+    max-height: 75vh;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(255, 133, 162, 0.3);
+    object-fit: contain;
     animation: zoom 0.4s ease;
+}
+
+iframe.modal-media-item {
+    width: 85vw;
+    height: 70vh;
+    border: none;
 }
 
 #caption {
@@ -294,6 +314,7 @@ header {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 1001;
 }
 
 @keyframes zoom {
@@ -306,4 +327,37 @@ footer {
     margin-top: 60px;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- ADAPTACIONES ÚNICAMENTE PARA MÓVILES --- */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 15px 25px;
+    }
+
+    .titulo-romantico {
+        font-size: 2.8rem;
+    }
+
+    .subtitulo {
+        font-size: 1.5rem;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tarjeta-imagen {
+        height: 320px;
+    }
+
+    .tarjeta:hover {
+        transform: none;
+    }
+
+    iframe.modal-media-item {
+        width: 92vw;
+        height: 55vh;
+    }
 }
