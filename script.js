@@ -19,6 +19,7 @@ const captions = [
     "Te amo Cristina 👩‍❤️‍💋‍👨💋", 
     "Por muchos años más 🥂🍾"
 ];
+
 let todosLosArchivos = [];
 
 // 2. OBTENER ARCHIVOS DE LA CARPETA DE DRIVE
@@ -81,7 +82,7 @@ function cargarGaleriaDinamica(archivos) {
             <div class="pie-foto"><p>${captionText}</p></div>
         `;
 
-        // Abrir en Modal al hacer clic o tocar pantalla
+        // Abrir en Modal al hacer clic
         tarjeta.addEventListener('click', () => {
             const modal = document.getElementById('modal');
             const mediaContainer = document.getElementById('modal-media-container');
